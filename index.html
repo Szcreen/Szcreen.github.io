@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Szcreen</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Szcreen">
+  <style>
+    /* Stylesheet */
+    .container {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0;
+    }
+
+    .social-logo {
+      display: inline-block;
+      width: 55px;
+      filter: brightness(85%);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      vertical-align: middle;
+      margin: 0 2px; /* Adjust margin for spacing between logos */
+    }
+
+    /* Increased margin for the Steam logo */
+    .social-logo.steamlogo {
+      margin-right: 3px;
+    }
+
+    .social-logo:hover {
+      transform: scale(1.1);
+      filter: brightness(100%);
+    }
+
+    .centerimg-container {
+      text-align: center;
+      position: relative;
+      width: 115px;
+      height: 115px;
+      margin: 0 auto;
+      left: -5px;
+    }
+
+    .centerimg {
+      border-radius: 100px;
+      background: #00000011;
+      padding: 5px;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .centerimg:hover {
+      transform: scale(1.1);
+    } 
+
+    .centertext {
+      color: #ffffff;
+      font-size: 90%;
+      font-family: sans-serif;
+      position: absolute;
+      bottom: -10px;
+      left: 55%;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .centerimg-container:hover .centertext {
+      transform: translateX(-50%) scale(1.1);
+    }
+
+    .centerimg-container:hover .centerimg {
+      transform: scale(1.1);
+    }
+
+    body {
+      background: #000000e1;
+      position: relative;
+    }
+
+    .about-me {
+      margin-top: 50px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 100%;
+      font-family: sans-serif;
+      font-size: 100%;
+      color: #6e6e6e85;
+    }
+  </style>
+</head>
+<body>
+  <div class="centerimg-container">
+    <a href="https://en.wikipedia.org/wiki/Pale_Blue_Dot" target="_blank">
+      <img src="Pale.jpg" alt="Pale blue dot" class="centerimg">
+    </a>
+    <p class="centertext">@Szcreen</p>
+  </div>
+  <div class="container">
+    <a href="https://t.me/Szcreen" target="_blank">
+      <img src="telegramlogo.png" alt="Telegram logo" class="social-logo">
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Szcreen.contact@gmail.com" target="_blank">
+      <img src="email logo.png" alt="Email icon" class="social-logo">
+    </a>
+    <a href="https://github.com/Szcreen" target="_blank">
+      <img src="github.png" alt="GitHub logo" class="social-logo">
+    </a>
+    <a href="https://www.tiktok.com/@szcreen" target="_blank" class="tiktok">
+      <img src="tiktok.png" alt="Tiktok logo" class="social-logo">
+    </a>
+    <a href="https://twitter.com/jake_ngl" target="_blank">
+      <img src="xlogo.png" alt="Twitter/x logo" class="social-logo"> 
+    </a>
+    <a href="https://discord.gg/FmurTUn8" target="_blank">
+      <img src="discordlogo.png" alt="Discord logo" class="social-logo">
+    </a>
+    <a href="https://steamcommunity.com/id/Szcreen/" target="_blank" class="steamlogo">
+      <img src="steamlogo.png" alt="Steam logo" class="social-logo steamlogo">
+    </a>
+  </div>
+
+  <div class="about-me">
+    <h2>About me</h2>
+    <p>I'm a 14-year-old learning to code and building my first website. I live in Sweden feel free to contact me through one of these options above.</p>
+  </div>
+</body>
+</html>
