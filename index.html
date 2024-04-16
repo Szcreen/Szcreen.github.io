@@ -45,7 +45,7 @@
       position: relative;
       width: 115px;
       height: 115px;
-      margin: 0 auto;
+      margin: 250px auto 20px; /* Adjust this value to move the content down */
       left: -5px;
     }
 
@@ -68,7 +68,7 @@
       font-size: 90%;
       font-family: sans-serif;
       position: absolute;
-      bottom: -10px;
+      bottom: -10px; /* Adjust this value to move the content down */
       left: 55%;
       transform: translateX(-50%);
       transition: transform 0.3s ease;
@@ -83,9 +83,8 @@
     }
 
     .about-me {
-      margin-top: 50px;
       text-align: center;
-      max-width: 800px;
+      max-width: 600px;
       margin: 0 auto;
       opacity: 100%;
       font-family: sans-serif;
@@ -120,7 +119,74 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 12px;
-      color: #6e6e6e85;
+      color: #000000b7;
+      transition: font-size 0.3s ease;
+    }
+
+    h1 {
+      font-family: "Montserrat Medium";
+      max-width: 40ch;
+      text-align: center;
+      transform: scale(0.94);
+      animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+      text-align: center;
+    }
+
+    @keyframes scale {
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px);
+      animation: fade-in 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        color: black;
+      }
+    }
+
+    .about-me span:nth-child(2n) {
+      animation-delay: 0.1s;
+    }
+
+    .about-me span:nth-child(3n) {
+      animation-delay: 0.2s;
+    }
+
+    .about-me span:nth-child(4n) {
+      animation-delay: 0.3s;
+    }
+
+    .about-me span:nth-child(5n) {
+      animation-delay: 0.4s;
+    }
+
+    .about-me span:nth-child(6n) {
+      animation-delay: 0.5s;
+    }
+
+    .about-me span:nth-child(7n) {
+      animation-delay: 0.6s;
+    }
+
+    .about-me span:nth-child(8n) {
+      animation-delay: 0.7s;
+    }
+
+    .about-me span:nth-child(9n) {
+      animation-delay: 0.8s;
+    }
+
+    .about-me span:nth-child(10n) {
+      animation-delay: 0.9s;
     }
   </style>
 </head>
@@ -153,14 +219,8 @@
     <a href="https://t.me/Szcreen" target="_blank">
       <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodownload.org%2Fwp-content%2Fuploads%2F2017%2F11%2Ftelegram-logo.png&f=1&nofb=1&ipt=64f1760114b37066a7726832b8c6a8869fb2db83c9effaecc0d3af389b807da0&ipo=images" alt="Telegram logo" class="social-logo">
     </a>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Szcreen.contact@gmail.com" target="_blank">
-      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F1f%2F1f9a438eaaf4f20885ecd763723479e7.png&f=1&nofb=1&ipt=cb4156a09525598b7ecefa82e05591c9593c202b6bf9a437310f54325f0e2a7a&ipo=images" alt="Email icon" class="social-logo">
-    </a>
     <a href="https://github.com/Szcreen" target="_blank">
       <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogospng.org%2Fdownload%2Fgithub%2Fgithub-512.png&f=1&nofb=1&ipt=33e6c30a48cec7cd4f570ca7aed9e11a9b0fcd090c9856c1bb08afd47b0b9518&ipo=images" alt="GitHub logo" class="social-logo">
-    </a>
-    <a href="https://www.tiktok.com/@szcreen" target="_blank" class="tiktok">
-      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.stickpng.com%2Fimages%2F5cb78671a7c7755bf004c14b.png&f=1&nofb=1&ipt=f3b80d56ed3ace2e6dfc8c92c64ca794f600087a6fbaa73703828e52b4197e80&ipo=images" alt="Tiktok logo" class="social-logo">
     </a>
     <a href="https://twitter.com/jake_ngl" target="_blank">
       <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F027%2F395%2F710%2Foriginal%2Ftwitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png&f=1&nofb=1&ipt=e9e579ef17c1ac7507e4ac39ef659cbaced621784be9d4a1d094e6dc064e6348&ipo=images" alt="Twitter/x logo" class="social-logo"> 
@@ -174,11 +234,28 @@
   </div>
   
   <div class="about-me">
-    <h2 style="color: #000000;" style="font-family: sans-serif;">About me</h2>
-    <p style="color: #000000;" style="font-family: sans-serif;">I'm a 14-year-old learning to code and building my first website. I live in Sweden feel free to contact me through one of these options above.</p>
+    <h1>
+      <span>I'm</span>
+      <span>a</span>
+      <span>14-year-old</span>
+      <span>learning</span>
+      <span>to</span>
+      <span>code</span>
+      <span>and</span>
+      <span>building</span>
+      <span>webpages</span>
+    </h1>
   </div>
 
   <!-- Copyright Notice -->
   <p class="copyright">© 2024 Szcreen. All rights reserved.</p>
+
+  <script>
+    const spans = document.querySelectorAll('.about-me span');
+
+    spans.forEach((span, index) => {
+      span.style.animationDelay = `${index * 100}ms`;
+    });
+  </script>
 </body>
 </html>
