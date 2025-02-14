@@ -1,11 +1,16 @@
 html, body {
   height: 100%;
+  width: auto;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   background-color: rgb(29, 29, 29);
   font-family: Arial, sans-serif;
+}
+
+body {
+  position: relative;
 }
 
 @keyframes fadeIn {
@@ -75,20 +80,22 @@ html, body {
   left: -5px;
   z-index: 1;
 }
-
+/* Ts is not just ai source: trust me bro js some errors :( */
 .centerimg {
-/*  border-radius: 100px; */
-/*  background: #0000001c; */
-  padding: 5px;
-  transition: transform 0.3s ease;
+  border-radius: 100px;
+  background: #0000001c;
+  padding: 7px;
+  transition: transform 0.5s ease, filter 0.5s ease;
   display: inline-block;
   width: 100%;
   height: 100%;
-  transform: translateY(35px);
+  filter: grayscale(70%);
+  
 }
 
 .centerimg:hover {
   transform: scale(1.1);
+  filter: grayscale(0%);
 } 
 
 .centertext {
@@ -96,14 +103,11 @@ html, body {
   color: rgba(255, 255, 255, 0.514);
   font-size: 90%;
   font-family: 'Share Tech Mono';
-  position: absolute;
+  position: relative;
+  text-align: center;
   bottom: -7px;
   left: 55%;
   transform: translateX(-50%);
-}
-
-.centerimg-container:hover .centerimg {
-  transform: scale(1.1);
 }
 
 .localtime {
@@ -116,40 +120,35 @@ html, body {
 
 .buttons-container {
   text-align: center;
-  margin-top: 50px; /* Move the button further down */
-  transform: translateY(30px); /* Adjust vertical positioning */
+  margin-top: 50px;
+  transform: translateY(30px);
 }
 
 .about-me-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 39em;
+  width: 90vw;
+  max-width: 600px;
+  min-width: 200px;
+  margin: 30px auto 30px auto;
   transition: opacity 1.5s ease;
-  margin: 0 auto;
-  font-size: 20px;
+  font-size: 5vw;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   color: rgba(255, 255, 255, 0.75);
   font-family: 'Share Tech Mono';
-}
-
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .openButton {
-  margin: 0 auto; /* Center the button horizontally */
+  margin: 0 auto;
   transition: color 0.4s linear;
-  color: rgba(255, 255, 255, 0.8); /* Slightly brighter text */
+  color: rgba(255, 255, 255, 0.8);
   font-family: "Share Tech Mono";
   text-shadow: 0 0 30px rgb(255, 123, 0),
                0 0 40px rgb(255, 123, 0),
                0 0 50px rgb(255, 123, 0);
-  font-size: 13px; /* Slightly larger font size */
+  font-size: 13px;
   cursor: pointer;
   text-decoration: none;
 }
