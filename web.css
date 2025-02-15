@@ -35,12 +35,6 @@ html, body {
     90% { transform: translate(10%,5%) }
     100% { transform: translate(5%,0) }
 }
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 .container {
   text-align: center;
   margin-top: 20px;
@@ -90,7 +84,7 @@ body {
 } 
 
 .centertext {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.514);
   font-size: 90%;
   font-family: sans-serif;
   position: absolute;
@@ -103,14 +97,23 @@ body {
   transform: scale(1.1);
 }
 
+/* Actually time-display but works ig */
 .about-me {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
   opacity: 100%;
-  font-family: sans-serif;
   font-size: 100%;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.514);
+  font-family: 'Share Tech Mono';
+  transform: translateY(-15px);
+}
+
+.localtime {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Share Tech Mono';
+  color: rgba(255, 255, 255, 0.514) ;
 }
 
 .copyright {
@@ -119,17 +122,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 12px;
-  color: #ffffff;
-  transition: font-size 0.3s ease;
+  color: rgba(255, 255, 255, 0.514);
 }
 
-h1 {
-  font-family: "Montserrat Medium";
-  max-width: 40ch;
-  text-align: center;
-  transform: scale(0.94);
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  text-align: center;
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sharetechmono/v15/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @keyframes scale {
