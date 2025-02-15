@@ -15,7 +15,7 @@ html, body {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent url('noise-transparent.png') repeat 0 0;
+  background: transparent url('/pictures/noise-transparent.png') repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation .2s infinite;
   opacity: .9;
@@ -86,7 +86,7 @@ html, body {
 .centertext {
   color: rgba(255, 255, 255, 0.514);
   font-size: 90%;
-  font-family: sans-serif;
+  font-family: 'Share Tech Mono'f;
   position: absolute;
   bottom: -7px;
   left: 55%;
