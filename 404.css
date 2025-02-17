@@ -32,10 +32,6 @@ a:visited {
     color: rgba(255, 255, 255, 0.514);
 }
 
-a:hover {
-    color: rgb(184, 49, 15);
-}
-
 .error-404-container {
     display: flex;
     flex-direction: column;
@@ -61,20 +57,46 @@ a:hover {
 .return {
     transform: translateY(-20px);
     background-color: rgb(20, 19, 19);
-    border: none;
+    border: 2px solid rgba(56, 56, 56, 0.514);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.return:hover {  
+    color: rgb(243, 122, 9);
+}
+
+.contact-container {
+    font-family: "Share Tech Mono";
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 12px;
+}
+
+.contact {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.514);
+    margin: 0;
+    padding: 7px 17px;
+    border: 2px solid rgba(56, 56, 56, 0.514);
+    background-color: rgb(20, 19, 19);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Share Tech Mono";
 }
 
 .copyright {
     position: absolute;
-    bottom: 10px;
+    bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
     color: rgba(255, 255, 255, 0.514);
+    margin: 0;
 }
 
 @font-face {

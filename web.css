@@ -116,13 +116,28 @@ html, body {
   color: rgba(255, 255, 255, 0.514) ;
 }
 
+.contact {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.514);
+  margin: 0;
+  padding: 7px 17px;
+  border: 2px solid rgba(56, 56, 56, 0.514);
+  background-color: rgb(20, 19, 19);
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Share Tech Mono";
+}
+
 .copyright {
   position: absolute;
-  bottom: 10px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 12px;
   color: rgba(255, 255, 255, 0.514);
+  margin: 0;
 }
 
 @font-face {
