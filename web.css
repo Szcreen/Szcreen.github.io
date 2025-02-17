@@ -5,6 +5,7 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   background-color: rgb(29, 29, 29);
+  font-family: "share tech mono";
 }
 
 .bg {
@@ -128,6 +129,11 @@ html, body {
   text-decoration: none;
   font-size: 12px;
   font-family: "Share Tech Mono";
+  transition: color 0.3s linear;
+}
+
+.contact:hover {
+  color: rgb(243, 122, 9);;
 }
 
 .copyright {
