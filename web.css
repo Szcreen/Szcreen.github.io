@@ -45,19 +45,17 @@ html, body {
 .social-logo {
   display: inline-block;
   width: 55px;
-  filter: brightness(85%);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(75%);
+  transition: transform 0.3s ease, filter 0.3s linear;
   vertical-align: middle;
   margin: 0 2px;
-}
-
-.social-logo.steamlogo {
-  margin-right: 3px;
+  filter: grayscale(100%);
 }
 
 .social-logo:hover {
   transform: scale(1.1);
   filter: brightness(100%);
+  filter: grayscale(0%);
 }
 
 .centerimg-container {
@@ -129,11 +127,12 @@ html, body {
   text-decoration: none;
   font-size: 12px;
   font-family: "Share Tech Mono";
-  transition: color 0.3s linear;
+  transition: color 0.4s linear, border-color 0.4s linear;
 }
 
 .contact:hover {
-  color: rgb(243, 122, 9);;
+  color: rgb(243, 122, 9);
+  border-color: rgb(243, 122, 9);
 }
 
 .copyright {
