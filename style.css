@@ -8,6 +8,15 @@ html, body {
   font-family: "share tech mono";
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1;}
+}
+
+.container, .about-me, .localtime, .contact, .copyright, .social-logo, .centerimg-container {
+  animation: fadeIn 3s ease-in-out;
+}
+
 .bg {
   position: fixed;
   top: -50%;
