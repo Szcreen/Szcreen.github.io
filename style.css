@@ -2,10 +2,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  margin: 0;
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: rgb(29, 29, 29);
-  font-family: "share tech mono";
+  font-family: Arial, sans-serif;
 }
 
 @keyframes fadeIn {
@@ -13,7 +13,7 @@ html, body {
   to { opacity: 1;}
 }
 
-.container, .about-me, .localtime, .contact, .copyright, .social-logo, .centerimg-container {
+.container, .buttons-container, .localtime, .contact, .copyright, .centerimg-container {
   animation: fadeIn 3s ease-in-out;
 }
 
@@ -49,22 +49,21 @@ html, body {
   text-align: center;
   margin-top: 20px;
   font-size: 0;
+  position: relative;
 }
 
 .social-logo {
   display: inline-block;
   width: 55px;
-  filter: brightness(75%);
-  transition: transform 0.3s ease, filter 0.3s linear;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   vertical-align: middle;
   margin: 0 2px;
-  filter: grayscale(100%);
+  opacity: 0.4;
 }
 
 .social-logo:hover {
   transform: scale(1.1);
-  filter: brightness(100%);
-  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .centerimg-container {
@@ -78,13 +77,14 @@ html, body {
 }
 
 .centerimg {
-  border-radius: 100px;
-  background: #0000001c;
+/*  border-radius: 100px; */
+/*  background: #0000001c; */
   padding: 5px;
   transition: transform 0.3s ease;
   display: inline-block;
   width: 100%;
   height: 100%;
+  transform: translateY(35px);
 }
 
 .centerimg:hover {
@@ -92,9 +92,10 @@ html, body {
 } 
 
 .centertext {
+  display: none;
   color: rgba(255, 255, 255, 0.514);
   font-size: 90%;
-  font-family: 'Share Tech Mono'f;
+  font-family: 'Share Tech Mono';
   position: absolute;
   bottom: -7px;
   left: 55%;
@@ -105,23 +106,56 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Actually time-display but works ig */
-.about-me {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 100%;
-  font-size: 100%;
-  color: rgba(255, 255, 255, 0.514);
-  font-family: 'Share Tech Mono';
-  transform: translateY(-15px);
-}
-
 .localtime {
-  text-align: center;
   font-size: 15px;
   font-family: 'Share Tech Mono';
-  color: rgba(255, 255, 255, 0.514) ;
+  color: rgba(255, 255, 255, 0.514);
+  margin: 15px;
+  text-align: center;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-top: 50px; /* Move the button further down */
+  transform: translateY(30px); /* Adjust vertical positioning */
+}
+
+.about-me-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 39em;
+  transition: opacity 1.5s ease;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Share Tech Mono';
+}
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+.openButton {
+  margin: 0 auto; /* Center the button horizontally */
+  transition: color 0.4s linear;
+  color: rgba(255, 255, 255, 0.8); /* Slightly brighter text */
+  font-family: "Share Tech Mono";
+  text-shadow: 0 0 30px rgb(255, 123, 0),
+               0 0 40px rgb(255, 123, 0),
+               0 0 50px rgb(255, 123, 0);
+  font-size: 13px; /* Slightly larger font size */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.openButton:hover {
+  color: rgb(243, 122, 9);
 }
 
 .contact {
@@ -131,8 +165,10 @@ html, body {
   color: rgba(255, 255, 255, 0.514);
   margin: 0;
   padding: 7px 17px;
-  border: 2px solid rgba(56, 56, 56, 0.514);
-  background-color: rgb(20, 19, 19);
+  text-shadow: 0 0 15px rgb(255, 123, 0),
+               0 0 30px rgb(255, 123, 0),
+               0 0 35px rgb(255, 123, 0);
+  background-color: rgba(0, 0, 0, 0);
   text-decoration: none;
   font-size: 12px;
   font-family: "Share Tech Mono";
@@ -141,7 +177,6 @@ html, body {
 
 .contact:hover {
   color: rgb(243, 122, 9);
-  border-color: rgb(243, 122, 9);
 }
 
 .copyright {
@@ -152,6 +187,12 @@ html, body {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.514);
   margin: 0;
+  font-family: "Share Tech Mono";
+} 
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 @font-face {
@@ -166,5 +207,11 @@ html, body {
 @keyframes scale {
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
   }
 }
