@@ -19,7 +19,7 @@ updateTime();
 // ABOUT ME TEXT ANIMATION
 document.addEventListener('DOMContentLoaded', function (event) {
   // array with texts to type in typewriter
-  var dataText = ["Hello, I'm a 3D modeler and programmer.", "I love to code.", "I love cats."];
+  var dataText = ["Hi", "Whose this guy?"];
 
   // calls itself until sentence is finished
   function typeWriter(text, i, fnCallback) {
